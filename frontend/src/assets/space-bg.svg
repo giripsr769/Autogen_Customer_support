@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg" cx="70%" cy="20%" r="90%">
+      <stop offset="0" stop-color="#17205d"/>
+      <stop offset="0.4" stop-color="#06112b"/>
+      <stop offset="1" stop-color="#020714"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="32%" cy="28%" r="70%">
+      <stop offset="0" stop-color="#ffd4ff"/>
+      <stop offset="0.18" stop-color="#b888ff"/>
+      <stop offset="0.48" stop-color="#5f55c8"/>
+      <stop offset="0.78" stop-color="#192257"/>
+      <stop offset="1" stop-color="#070b22"/>
+    </radialGradient>
+    <radialGradient id="planet2" cx="35%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#f7a6ff"/>
+      <stop offset="0.38" stop-color="#6c3eb9"/>
+      <stop offset="1" stop-color="#10152f"/>
+    </radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f2c65" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#050716" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+    <pattern id="stars" width="110" height="110" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="18" r="1" fill="#fff" opacity=".55"/>
+      <circle cx="67" cy="41" r="1.2" fill="#a9d8ff" opacity=".4"/>
+      <circle cx="95" cy="86" r=".9" fill="#fff" opacity=".35"/>
+      <circle cx="34" cy="94" r=".8" fill="#b89cff" opacity=".4"/>
+    </pattern>
+    <pattern id="grid" width="62" height="62" patternUnits="userSpaceOnUse">
+      <path d="M62 0H0V62" fill="none" stroke="#29a8ff" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#stars)" opacity=".7"/>
+  <ellipse cx="1650" cy="155" rx="375" ry="375" fill="url(#planet)" opacity=".92"/>
+  <ellipse cx="1650" cy="155" rx="405" ry="405" fill="none" stroke="#7fe5ff" stroke-width="8" opacity=".35" filter="url(#glow)" transform="rotate(-18 1650 155)"/>
+  <ellipse cx="1650" cy="155" rx="520" ry="320" fill="none" stroke="#ff7edd" stroke-width="8" opacity=".38" filter="url(#glow)" transform="rotate(18 1650 155)"/>
+  <circle cx="560" cy="710" r="145" fill="url(#planet2)" opacity=".8"/>
+  <circle cx="560" cy="710" r="172" fill="none" stroke="#ff80ea" stroke-width="7" opacity=".16" filter="url(#glow)"/>
+  <ellipse cx="1100" cy="1170" rx="370" ry="370" fill="url(#planet)" opacity=".65"/>
+  <path d="M0 860 C480 770 930 900 1920 820" fill="none" stroke="#32e4ff" stroke-opacity=".32" stroke-width="4" filter="url(#glow)"/>
+  <path d="M0 905 C540 820 1070 920 1920 870" fill="none" stroke="#ff62d6" stroke-opacity=".25" stroke-width="4" filter="url(#glow)"/>
+  <rect x="0" y="805" width="1920" height="275" fill="url(#floor)"/>
+  <g transform="translate(0 775) skewX(-14)"><rect width="2100" height="340" fill="url(#grid)" opacity=".8"/></g>
+  <ellipse cx="980" cy="1010" rx="900" ry="90" fill="#00b7ff" opacity=".07" filter="url(#soft)"/>
+</svg>

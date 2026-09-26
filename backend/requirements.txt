@@ -1,0 +1,8 @@
+autogen-agentchat
+autogen-ext[openai]
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+duckduckgo-search
+sse-starlette
